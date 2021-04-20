@@ -1,13 +1,13 @@
 # Deploy Sonarqube with Terraform in Kubernetes (Minikube)
 ## Requirements
-	 	 	 # Make Sure you have following installed
+
 	 	 	 ########## provider.helm: version = "~> 2.1" ########
 	 	 	 ########## Virtualbox                6.1     ########
 	 	 	 ########## Minikube                  v1.19.0 ########
 	 	 	 ########## Kubectl                   v1.21.0 ########
 	 	 	 ########## Terraform                 0.12.0  ########
 	 	 	 ########## Helm                      v3.5.4  ########
-
+## If these packages are not Installed then Script can that for you
 
 ## What the Script will do
 1. Configure Helm and Tiller for use with Kubernetes cluster;
