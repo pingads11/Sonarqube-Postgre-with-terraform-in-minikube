@@ -46,6 +46,7 @@ cd terraform-kubernetes-helm
 terraform init
 terraform apply -auto-approve
 cd ..
+export KUBE_CONFIG_PATH=~/.kube/config
 cd terraform-postgre
 terraform init
 terraform apply -auto-approve
@@ -59,7 +60,6 @@ terraform init
 terraform apply -auto-approve
 cd ..
 kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
-export KUBE_CONFIG_PATH=~/.kube/config
 kubectl apply -f sonarqube-ingress.yaml
 minikubeip=$(minikube ip)
 echo "Sonarqube URL: https://$minikubeip/sonarqube/"
