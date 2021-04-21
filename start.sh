@@ -59,6 +59,7 @@ cd terraform-nginx-ingress
 terraform init
 terraform apply -auto-approve
 cd ..
+### Needed this step as helm3 has issues with tiller
 kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
 kubectl apply -f sonarqube-ingress.yaml
 minikubeip=$(minikube ip)
