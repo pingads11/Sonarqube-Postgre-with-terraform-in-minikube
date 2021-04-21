@@ -3,11 +3,6 @@ resource "helm_release" "sonarqubedatabase" {
   chart = "stable/postgresql"
 
   set {
-    name  = "postgresqlPassword"
-    value = "postgrerootpass"
-  }
-
-  set {
     name  = "postgresqlUsername"
     value = "postgreuser"
   }
