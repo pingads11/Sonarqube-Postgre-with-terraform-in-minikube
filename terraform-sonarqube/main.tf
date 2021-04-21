@@ -15,10 +15,6 @@ resource "helm_release" "sonarqube" {
     value = "/sonarqube/"
   }
   set {
-    name  = "mysql.mysqlParams.useSSL"
-    value = "false"
-  }
-  set {
     name  = "replicaCount"
     value = "3"
   }
@@ -31,27 +27,23 @@ resource "helm_release" "sonarqube" {
     value = "false"
   }
   set {
-    name  = "mysql.enabled"
-    value = "false"
-  }
-  set {
     name  = "database.type"
-    value = "mysql"
+    value = "postgresql"
   }
   set {
-    name  = "mysql.mysqlServer"
-    value = "sonarqubedatabase-mysql"
+    name  = "postgresql.postgresqlServer"
+    value = "sonarqubedatabase-postgre"
   }
   set {
-    name  = "mysql.mysqlUser"
-    value = "mysqluser"
+    name  = "postgresql.postgresqlUsername"
+    value = "postgreuser"
   }
   set {
-    name  = "mysql.mysqlPassword"
-    value = "mysqlpass"
+    name  = "postgresql.postgresqlPassword"
+    value = "postgrepass"
   }
   set {
-    name  = "mysql.mysqlDatabase"
-    value = "mysqlsonarqubedb"
+    name  = "postgresql.postgresqlDatabase"
+    value = "postgresonarqubedb"
   }
 }
