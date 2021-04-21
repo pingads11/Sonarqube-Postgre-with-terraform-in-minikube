@@ -1,6 +1,5 @@
 resource "helm_release" "sonarqube" {
   name  = "sonarqube"
-  repository = "https://kubernetes-charts.storage.googleapis.com/"
   chart = "stable/sonarqube"
 
   set {
