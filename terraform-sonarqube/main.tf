@@ -32,7 +32,7 @@ resource "helm_release" "sonarqube" {
   }
   set {
     name  = "postgresql.postgresqlServer"
-    value = "sonarqubedatabase-postgre"
+    value = "sonarqubedatabase-postgresql"
   }
   set {
     name  = "postgresql.postgresqlUsername"
